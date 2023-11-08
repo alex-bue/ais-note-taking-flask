@@ -8,4 +8,4 @@ venv
 .git
 .gitignore
 .env
-
+db.sqlite3

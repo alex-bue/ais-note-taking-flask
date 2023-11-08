@@ -1,0 +1,17 @@
+-- schema.sql
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS notes;
+
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE notes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    assocUser INTEGER NOT NULL,
+    dateWritten DATETIME NOT NULL,
+    note TEXT NOT NULL,
+    publicID INTEGER NOT NULL
+);
